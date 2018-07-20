@@ -1,0 +1,44 @@
+
+<DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <meta http-equiv="X-UA-Compatible" content="ie=edge">
+            <title>Document</title>
+        </head>
+        <body>
+                <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script> 
+               
+        
+                    <div ng-app="" ng-init="ingredientes={harina:100,azucar:20,huevo:50,chocolate:10,leche:100}">
+                        <p>Name: <input type="text" ng-model="user.name"></p>
+                        <p>LastName: <input type="text" ng-model="user.lastname"></p>
+        
+                        <p ng-bind="user.name">Hola</p>
+                        <p ng-bind="user.lastname"></p>
+        
+                        <h3>Hola {{user.name + " " + user.lastname}}</h3>
+        
+                        <p>{{25*10}}</p>
+        
+                        <p>valor de la posicion 0: {{arreglo[0]}}</p>
+                        <p>valor de la posicion 4: {{arreglo[4]}}</p>
+        
+                        <h4>Letras</h4>
+        
+                        <ul>
+                            <li ng-repeat="letras in arreglo">{{letras}}</li>
+                        </ul>
+        
+                        <h4>Mascotas de {{user.name}}</h4>
+                        <ul>
+                            <li ng-repeat="pet in user.pets">{{pet}}</li>
+                        </ul>
+        
+                        
+                      </div>
+                </body>
+            
+        </body>
+        </html>

@@ -1,0 +1,12 @@
+.left{
+    border: solid 1px greenyellow;
+    min-height: 100px;
+    display:block;
+
+}
+
+.right{
+    border: solid 1px blue;
+    min-height: 100px;
+    display:block;
+}

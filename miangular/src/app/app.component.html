@@ -1,0 +1,55 @@
+
+  
+<app-nav>carga...</app-nav>
+
+  <router-outlet></router-outlet>
+
+  <div class="container">
+      <div class="row">
+
+        <button class="btn btn-primary" (click)="visible = !guapo">{{visible}}</button>
+
+        <p *ngIf="visible;else otroBloque" > ahora soy guapo...</p>
+        <ng-template #otroBloque>
+            <p>no soy guapo y me escondo</p>
+
+        </ng-template>
+
+      </div>
+
+        <div class="row">
+          <ul>
+            <li *ngfor="let car of cars; let i = index">
+              {{i}} - {{car}}
+            </li>
+          </ul>
+        </div>
+
+        <div class="row">
+
+            <ul>
+                <li *ngfor="let auto of autos">
+                  {{auto | json}}
+                </li>
+              </ul>
+
+        </div>
+
+
+        <div class="row">
+          <ul>
+            <li *ngfor="let auto of autos"[ngStyle]="{backgroundColor: auto.total > 0? 'green' : 'red'}">{{auto.nombre}}</li>
+          </ul>
+        </div>
+
+        <div class="row">
+            <ul>
+
+              <li class="alert" *ngfor="let auto of autos" [ngClass]="{alert-succes:auto.total > 0, alert-danger= auto.total == 0}">{{auto.nombre}} </li>
+      
+            </ul>
+
+        </div>
+
+
+  </div>
